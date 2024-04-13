@@ -24,10 +24,7 @@ Behind the scenes, data is stored in PostgreSQL, a reliable database system, to 
 
 ## Dependencies
 
-- Django
-- Django REST Framework
-- corsheaders
-- drf_yasg
+Dependencies for this project are managed using a requirements.txt file, which is commonly used with pip to install the required Python packages. Additionally, when using Docker for containerization, dependency management can be handled within the Docker environment itself.
 
 
 
