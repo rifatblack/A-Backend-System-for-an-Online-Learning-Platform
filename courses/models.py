@@ -1,6 +1,7 @@
 # models.py
 from django.db import models
 
+
 class Course(models.Model):
     course_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
@@ -8,6 +9,11 @@ class Course(models.Model):
     instructor = models.CharField(max_length=100)
     duration = models.IntegerField()
     price = models.FloatField()
+    image = models.ImageField(upload_to='course_images/', null=True, blank=True)  # Allow null and blank
+
+    def __str__(self):
+        return self.title
+
 
 class Enrollment(models.Model):
     enrollment_id = models.AutoField(primary_key=True)
